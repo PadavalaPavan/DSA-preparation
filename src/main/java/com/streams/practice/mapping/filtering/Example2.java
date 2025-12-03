@@ -9,11 +9,11 @@ public class Example2 {
         // 2. Filter names starting with letter "A".
         Stream<String> names = Stream.of("pavan","Apple","Arjun","ashok","kumar");
 
-        List<String> namesWithA = names.filter(n -> n.startsWith("A")).collect(Collectors.toList());
+        List<String> namesWithA = names.filter(n -> n.charAt(0)=='A').collect(Collectors.toList());
 
         //ignore case
-        List<String> namesWitha = names.filter(n -> n.toLowerCase().startsWith("a")).collect(Collectors.toList());
+        //List<String> namesWitha = names.filter(n -> n.toLowerCase().startsWith("a")).collect(Collectors.toList());
         System.out.println(namesWithA);
-        System.out.println(namesWitha);
+        //System.out.println(namesWitha);
     }
 }

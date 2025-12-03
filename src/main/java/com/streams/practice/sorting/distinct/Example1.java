@@ -9,7 +9,7 @@ public class Example1 {
     public static void main(String[] args) {
         //Sort integers in ascending order.
         List<Integer> nums = Arrays.asList(1,2,3,4,9,0,1,23,94);
-        List<Integer> sortedNums = nums.stream().sorted().collect(Collectors.toList());
+        List<Integer> sortedNums = nums.stream().sorted().distinct().collect(Collectors.toList());
         System.out.println(sortedNums);
 
         //Get distinct integers from a list.

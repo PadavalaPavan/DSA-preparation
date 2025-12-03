@@ -10,7 +10,7 @@ public class Example1 {
         //Check if all numbers are even.
         List<Integer> numbers = Arrays.asList(1,2,3,4,56,7,8,9,10,-20);
        List<Integer> even = numbers.stream().filter(n -> n%2 == 0).collect(Collectors.toList());
-        System.out.println(even);
+        System.out.println(!even.isEmpty());
 
         //Check if any number is negative.
        boolean flag = numbers.stream().anyMatch(n -> n<0);

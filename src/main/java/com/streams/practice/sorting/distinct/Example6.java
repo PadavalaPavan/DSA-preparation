@@ -10,5 +10,11 @@ public class Example6 {
                 LocalDate.of(1998,1,25));
         dates.sort(LocalDate::compareTo);
         dates.forEach(System.out::println);
+        Example6 a = new Example6();
+        a.m1();
+    }
+
+    public void m1(){
+
     }
 }

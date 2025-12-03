@@ -21,7 +21,7 @@ public class Example3 {
 
         //Sort employees by name and then by age.
         List<Employee> sortedBySalary1 = employeeList.stream()
-                .sorted(Comparator.comparingDouble(Employee::getSalary).thenComparingInt(Employee::getAge))
+                .sorted(Comparator.comparing(Employee::getName).thenComparingInt(Employee::getAge))
                 .collect(Collectors.toList());
         System.out.println(sortedBySalary1);
     }
