@@ -13,6 +13,8 @@ public class Example1 {
 
         //Parallelize sum of large array using parallelStream().
 
+       // Stream<Integer> l1 = list.stream().distinct();
+
         int i = list.parallelStream().mapToInt(Integer::intValue).sum();
 
        List<Integer> dis = list.stream().distinct().collect(Collectors.toList());
@@ -46,6 +48,7 @@ public class Example1 {
         List<Integer> l2 = Arrays.asList(5,6,7,8);
 
         List<Integer> ll = Stream.concat(l1.stream(),l2.stream()).collect(Collectors.toList());
+        Stream.of(l1, l2).flatMap(List::stream).collect(Collectors.toList());
 
         //Find common elements between two lists using streams.
 
